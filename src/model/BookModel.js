@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// mongoDB Atlas
+//!Part #2 Point 7 mongoDB Atlas
 mongoose.connect("mongodb+srv://priyanka:priyanka@cluster0.rutr8.mongodb.net/Library?retryWrites=true&w=majority")
 
 // mongoose.connect('mongodb://localhost:27017/Library');
