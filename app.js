@@ -4,7 +4,7 @@ const express = require('express');
 const path = require ('path'); 
 const cors = require('cors');
 
-var port = process.env.PORT || 5000;  //! Part 1 Point 1
+var port = process.env.PORT || 5000;  //! Part #1 Point 1
 
 const nav= [
     {
@@ -38,9 +38,9 @@ app.set('views','./src/views');
 app.set('view engine','ejs'); 
 
 
-app.use(express.urlencoded({extended:true}));  
+app.use(express.urlencoded({extended:true})); //!Part #2 point 10 
 app.use(express.json());
-app.use(express.static(path.join(__dirname , '/public')));  //! Part #2 Point6
+app.use(express.static(path.join(__dirname , '/public')));  //! Part #2 Point 6
 
 app.use('/login',loginRouter); 
 app.use('/signup',signupRouter); 
@@ -60,6 +60,6 @@ app.get('/',function(req,res){
 
 // !Part #1 point 5
  app.listen(port,()=>{
-    console.log("Server is Ready at " + port);  //! I make changes here(changed 3000 to 5000 )
+    console.log("Server is Ready at " + port);
 });
 
