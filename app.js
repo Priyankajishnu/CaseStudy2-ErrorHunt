@@ -34,13 +34,13 @@ app.set('views','./src/views');
 app.set('view engine','ejs'); 
 
 
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}));  //! I make changes here (changed bodyparser.urlencoded to express.urlencoded)
 app.use(express.json());
 app.use(express.static(path.join(__dirname , '/public'))); 
 
 app.use('/login',loginRouter); 
 app.use('/signup',signupRouter); 
-app.use('/home',homeRouter); 
+app.use('/home',homeRouter);  //! I make changes here(changed homeRoute to homeroute)
 app.use('/books',booksRouter); 
 app.use('/authors',authorsRouter); 
 
@@ -57,5 +57,5 @@ app.get('/',function(req,res){
 
 
 app.listen(5000,()=>{
-    console.log("Server Ready on 5000");
+    console.log("Server Ready on 5000");  //! I make changes here(changed 3000 to 5000 )
 });
