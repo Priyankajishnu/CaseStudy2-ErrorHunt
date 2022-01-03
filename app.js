@@ -45,7 +45,7 @@ app.use(bodyParser.json());
 //!
 app.use(express.urlencoded({extended:true})); 
 app.use(express.json());
-app.use(express.static(path.join(__dirname , '/public')));  //! Part #2 Point 6
+app.use(express.static(path.join(__dirname , '/public')));  
 
 app.use('/login',loginRouter); 
 app.use('/signup',signupRouter); 
